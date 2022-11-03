@@ -19,4 +19,9 @@ class Repository @Inject constructor(
         return api.getEpisodes()
     }
 
+
+    suspend fun getCharacterByName(name:String):ArrayList<CharacterItem>{
+        return api.getCharacterByName(name)
+    }
+
 }

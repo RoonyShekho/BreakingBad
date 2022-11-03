@@ -26,7 +26,7 @@ fun SetupNavGraph(
 
 
         composable(route= MainRoutes.Episodes.route){
-            EpisodesScreen(navController = navController)
+            EpisodesScreen()
         }
 
 

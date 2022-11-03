@@ -1,10 +1,12 @@
 package com.example.breakingbad.model
 
 
+import androidx.compose.runtime.Immutable
 import com.google.gson.annotations.SerializedName
 
 
 
+@Immutable
 data class CharacterItem(
     @SerializedName("appearance")
     val appearance: List<Int>,

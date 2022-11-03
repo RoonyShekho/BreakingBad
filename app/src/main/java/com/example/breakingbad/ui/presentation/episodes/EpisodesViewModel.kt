@@ -12,7 +12,7 @@ import javax.inject.Inject
 @HiltViewModel
 class EpisodesViewModel @Inject constructor(
     private val repository: Repository
-):ViewModel() {
+) : ViewModel() {
 
     val items = mutableStateOf<ArrayList<EpisodeItem>>(arrayListOf())
 
@@ -22,5 +22,4 @@ class EpisodesViewModel @Inject constructor(
             items.value = repository.getEpisodes()
         }
     }
-
 }

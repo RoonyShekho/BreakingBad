@@ -23,4 +23,21 @@ class CharactersViewModel @Inject constructor(
         }
     }
 
+
+    fun searchCharacter(name:String){
+        viewModelScope.launch {
+            items.value = repository.getCharacterByName(name)
+        }
+    }
+
+
+    fun getCharacters(){
+        viewModelScope.launch {
+            items.value = repository.getCharacters()
+        }
+    }
+
 }
+
+
+

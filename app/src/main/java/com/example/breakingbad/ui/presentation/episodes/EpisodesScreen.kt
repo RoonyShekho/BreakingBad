@@ -13,16 +13,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.navigation.NavHostController
 import com.example.breakingbad.model.EpisodeItem
 
 @Composable
 fun EpisodesScreen(
-    navController: NavHostController,
     vm: EpisodesViewModel = hiltViewModel()
 ) {
 
-    val items by vm.items
+    val bcsItems by vm.items
     val state = rememberLazyListState()
 
 
@@ -34,10 +32,11 @@ fun EpisodesScreen(
             Spacer(Modifier.windowInsetsTopHeight(WindowInsets.statusBars))
         }
 
-
-        itemsIndexed(items = items, key = { _, item -> item.title }) { index, item ->
+        itemsIndexed(items = bcsItems, key = { _, item -> item.title }) { index, item ->
             Episode(index = index, selectEpisode = { /*TODO*/ }, item = item)
         }
+
+
     }
 
 }
@@ -79,7 +78,7 @@ fun EpisodeItem(
                 .padding(8.dp)
         ) {
 
-            Text(text = item.title, style = MaterialTheme.typography.headlineMedium, )
+            Text(text = item.title, style = MaterialTheme.typography.headlineMedium)
 
             Text(
                 text = "S${item.season}E${item.episode}",
