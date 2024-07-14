@@ -1,4 +1,4 @@
-# ScreenShots
+# Screenshots
 
 <imge width="300" height = "500" alt="Screenshot_2022-10-26-22-14-03-025_com example breakingbad" src="https://user-images.githubusercontent.com/98882544/198126375-64e13c83-def5-4447-887e-cb5e883b8fb0.jpg">
 
